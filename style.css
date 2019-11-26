@@ -1,0 +1,28 @@
+body {
+	    background-image: url(bg.png) !important;
+    background-position: top !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    margin: 0; height: 100%; overflow: hidden
+}
+
+#hot {
+	margin-left: 32%;
+    margin-top: 10%;
+}
+
+#hot-display-license-info {
+	display:none !important;
+}
+
+.button {
+	width:230px;
+	height:40px;
+	background-color:#62CDB2;
+	color:white;
+	text-align:center;
+	line-height:2.4;
+	border-radius:25px;
+	margin-left: 52%;
+	margin-top:20px;
+}

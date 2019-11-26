@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Handsontable example</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script type="text/javascript" src="/js/lib/dummy.js"></script>
+   <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+  <style id="compiled-css" type="text/css">
+      </style>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@latest/dist/handsontable.full.min.css">
+<link rel="stylesheet" type="text/css" href="https://handsontable.com/static/css/main.css">
+<script src="https://cdn.jsdelivr.net/npm/handsontable@latest/dist/handsontable.full.min.js"></script>
+
+  
+
+
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">//<![CDATA[
+
+    window.onload=function(){
+      
+var dataObject = [
+  {
+    id: 1,
+    flag: ' ',
+    currencyCode: ' ',
+    currency: ' ',
+    level: ' ',
+    units: ' ',
+    asOf: ' ',
+    onedChng: ' '
+  },
+  {
+    id: 2,
+    flag: ' ',
+    currencyCode: ' ',
+    currency: 'Japanese Yen',
+    level: 124.3870,
+    units: '  / USD',
+    asOf: '08/19/2019',
+    onedChng: 0.0001
+  },
+  {
+    id: 3,
+    flag: 'GBP',
+    currencyCode: 'GBP',
+    currency: 'Pound Sterling',
+    level: 0.6396,
+    units: 'GBP / USD',
+    asOf: '08/19/2019',
+    onedChng: 0.00
+  },
+  {
+    id: 4,
+    flag: 'CHF',
+    currencyCode: 'CHF',
+    currency: 'Swiss Franc',
+    level: 0.9775,
+    units: 'CHF / USD',
+    asOf: '08/19/2019',
+    onedChng: 0.0008
+  },
+  {
+    id: 5,
+    flag: 'CAD',
+    currencyCode: 'CAD',
+    currency: 'Canadian Dollar',
+    level: 1.3097,
+    units: 'CAD / USD',
+    asOf: '08/19/2019',
+    onedChng: -0.0005
+  },
+  {
+    id: 6,
+    flag: 'AUD',
+    currencyCode: 'AUD',
+    currency: 'Australian Dollar',
+    level: 1.3589,
+    units: 'AUD / USD',
+    asOf: '08/19/2019',
+    onedChng: 0.0020
+  },
+  {
+    id: 7,
+    flag: 'NZD',
+    currencyCode: 'NZD',
+    currency: 'New Zealand Dollar',
+    level: 1.5218,
+    units: 'NZD / USD',
+    asOf: '08/19/2019',
+    onedChng: -0.0036
+  },
+  {
+    id: 8,
+    flag: 'SEK',
+    currencyCode: 'SEK',
+    currency: 'Swedish Krona',
+    level: 8.5280,
+    units: 'SEK / USD',
+    asOf: '08/19/2019',
+    onedChng: 0.0016
+  },
+  {
+    id: 9,
+    flag: 'NOK',
+    currencyCode: 'NOK',
+    currency: 'Norwegian Krone',
+    level: 8.2433,
+    units: 'NOK / USD',
+    asOf: '08/19/2019',
+    onedChng: 0.0008
+  },
+  {
+    id: 10,
+    flag: 'BRL',
+    currencyCode: 'BRL',
+    currency: 'Brazilian Real',
+    level: 3.4806,
+    units: 'BRL / USD',
+    asOf: '08/19/2019',
+    onedChng: -0.0009
+  },
+  {
+    id: 11,
+    flag: 'CNY',
+    currencyCode: 'CNY',
+    currency: 'Chinese Yuan',
+    level: 6.3961,
+    units: 'CNY / USD',
+    asOf: '08/19/2019',
+    onedChng: 0.0004
+  },
+  {
+    id: 12,
+    flag: 'RUB',
+    currencyCode: 'RUB',
+    currency: 'Russian Rouble',
+    level: 65.5980,
+    units: 'RUB / USD',
+    asOf: '08/19/2019',
+    onedChng: 0.0059
+  },
+  {
+    id: 13,
+    flag: 'INR',
+    currencyCode: 'INR',
+    currency: 'Indian Rupee',
+    level: 65.3724,
+    units: 'INR / USD',
+    asOf: '08/19/2019',
+    onedChng: 0.0026
+  },
+  {
+    id: 14,
+    flag: 'TRY',
+    currencyCode: 'TRY',
+    currency: 'New Turkish Lira',
+    level: 2.8689,
+    units: 'TRY / USD',
+    asOf: '08/19/2019',
+    onedChng: 0.0092
+  },
+  {
+    id: 15,
+    flag: 'THB',
+    currencyCode: 'THB',
+    currency: 'Thai Baht',
+    level: 35.5029,
+    units: 'THB / USD',
+    asOf: '08/19/2019',
+    onedChng: 0.0044
+  },
+  {
+    id: 16,
+    flag: 'IDR',
+    currencyCode: 'IDR',
+    currency: 'Indonesian Rupiah',
+    level: 13.83,
+    units: 'IDR / USD',
+    asOf: '08/19/2019',
+    onedChng: -0.0009
+  },
+  {
+    id: 17,
+    flag: 'MYR',
+    currencyCode: 'MYR',
+    currency: 'Malaysian Ringgit',
+    level: 4.0949,
+    units: 'MYR / USD',
+    asOf: '08/19/2019',
+    onedChng: 0.0010
+  },
+  {
+    id: 18,
+    flag: 'MXN',
+    currencyCode: 'MXN',
+    currency: 'Mexican New Peso',
+    level: 16.4309,
+    units: 'MXN / USD',
+    asOf: '08/19/2019',
+    onedChng: 0.0017
+  },
+  {
+    id: 19,
+    flag: 'ARS',
+    currencyCode: 'ARS',
+    currency: 'Argentinian Peso',
+    level: 9.2534,
+    units: 'ARS / USD',
+    asOf: '08/19/2019',
+    onedChng: 0.0011
+  },
+  {
+    id: 20,
+    flag: 'DKK',
+    currencyCode: 'DKK',
+    currency: 'Danish Krone',
+    level: 6.7417,
+    units: 'DKK / USD',
+    asOf: '08/19/2019',
+    onedChng: 0.0025
+  },
+  {
+    id: 21,
+    flag: 'ILS',
+    currencyCode: 'ILS',
+    currency: 'Israeli New Sheqel',
+    level: 3.8262,
+    units: 'ILS / USD',
+    asOf: '08/19/2019',
+    onedChng: 0.0084
+  },
+  {
+    id: 22,
+    flag: 'PHP',
+    currencyCode: 'PHP',
+    currency: 'Philippine Peso',
+    level: 46.3108,
+    units: 'PHP / USD',
+    asOf: '08/19/2019',
+    onedChng: 0.0012
+  }
+];
+var currencyCodes = ['EUR', ' ', 'GBP', 'CHF', 'CAD', 'AUD', 'NZD', 'SEK', 'NOK', 'BRL', 'CNY', 'RUB', 'INR', 'TRY', 'THB', 'IDR', 'MYR', 'MXN', 'ARS', 'DKK', 'ILS', 'PHP'];
+var flagRenderer = function (instance, td, row, col, prop, value, cellProperties) {
+  var currencyCode = value;
+  while (td.firstChild) {
+    td.removeChild(td.firstChild);
+  }
+  if (currencyCodes.indexOf(currencyCode) > -1) {
+    var flagElement = document.createElement('DIV');
+    flagElement.className = 'flag ' + currencyCode.toLowerCase();
+    td.appendChild(flagElement);
+  } else {
+    var textNode = document.createTextNode(value === null ? '' : value);
+
+    td.appendChild(textNode);
+  }
+};
+var hotElement = document.querySelector('#hot');
+var hotElementContainer = hotElement.parentNode;
+var hotSettings = {
+  data: dataObject,
+  columns: [
+    {
+      data: 'firstname',
+      type: 'text'
+    },
+    {
+      data: 'lastname',
+      type: 'text'    
+  	},
+    {
+      data: 'email',
+      type: 'text'
+    },
+    {
+      data: 'phone',
+      type: 'text'
+    }
+  ],
+  stretchH: 'all',
+  width: 805,
+  autoWrapRow: true,
+  height: 487,
+  maxRows: 200,
+  rowHeaders: true,
+  colHeaders: [
+    'firstname',	'lastname',	'email',	'phone'
+  ],
+  columnSorting: {
+    indicator: true
+  },
+  autoColumnSize: {
+    samplingRatio: 23
+  }
+};
+var hot = new Handsontable(hotElement, hotSettings);
+
+
+
+    }
+
+  //]]></script>
+
+</head>
+
+</head>
+<body>
+
+    <div id="hot" style="height: 487px; overflow: hidden; width: 805px;" data-originalstyle="height: 487px; overflow: hidden; width: 805px;" class="handsontable htRowHeaders htColumnHeaders"><div class="ht_master handsontable"><div class="wtHolder" style="position: relative; height: 487px; width: 805px;"><div class="wtHider" style="width: 805px; height: 533px;"><div class="wtSpreader" style="position: relative; top: 0px; left: 0px;"><table class="htCore"><colgroup><col class="rowHeader" style="width: 50px;"><col style="width: 53px;"><col style="width: 111px;"><col style="width: 92px;"><col style="width: 120px;"><col style="width: 92px;"><col style="width: 89px;"><col style="width: 87px;"><col style="width: 111px;"></colgroup><thead><tr><th class="" style="height: 25px;"><div class="relative"><span class="colHeader cornerHeader">&nbsp;</span></div></th><th class=""><div class="relative"><span class="colHeader columnSorting sortAction">ID</span></div></th><th class=""><div class="relative"><span class="colHeader columnSorting sortAction">Country</span></div></th><th class=""><div class="relative"><span class="colHeader columnSorting sortAction">Code</span></div></th><th class="ht__highlight"><div class="relative"><span class="colHeader columnSorting sortAction">Currency</span></div></th><th class=""><div class="relative"><span class="colHeader columnSorting sortAction">Level</span></div></th><th class=""><div class="relative"><span class="colHeader columnSorting sortAction">Units</span></div></th><th class=""><div class="relative"><span class="colHeader columnSorting sortAction">Date</span></div></th><th class=""><div class="relative"><span class="colHeader columnSorting sortAction">Change</span></div></th></tr></thead><tbody><tr><th class=""><div class="relative"><span class="rowHeader">1</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class="ht__highlight"><div class="relative"><span class="rowHeader">2</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class="current highlight"></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">3</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">4</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">5</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">6</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">7</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">8</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">9</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">10</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">11</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">12</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">13</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">14</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">15</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">16</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">17</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">18</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">19</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">20</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">21</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr><tr><th class=""><div class="relative"><span class="rowHeader">22</span></div></th><td class="htRight htNumeric"></td><td class=""></td><td class=""></td><td class=""></td><td class="htRight htNumeric"></td><td class=""></td><td class="htAutocomplete"><div class="htAutocompleteArrow">▼</div></td><td class="htRight htNumeric"></td></tr></tbody></table><div class="htBorders"><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 120px; display: block; top: 49px; left: 305px;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 23px; width: 2px; display: block; top: 49px; left: 305px;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 120px; display: block; top: 71px; left: 305px;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 24px; width: 2px; display: block; top: 49px; left: 424px;"></div><div class="wtBorder current corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border-width: 1px 1px 0px; border-style: solid; border-color: rgb(255, 255, 255); border-image: initial; display: block; top: 68px; left: 421px;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill corner" style="background-color: rgb(255, 0, 0); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder area" style="background-color: rgb(75, 137, 255); height: 1px; width: 754px; display: none; top: 26px; left: 50px;"></div><div class="wtBorder area" style="background-color: rgb(75, 137, 255); height: 506px; width: 1px; display: none; top: 26px; left: 50px;"></div><div class="wtBorder area" style="background-color: rgb(75, 137, 255); height: 1px; width: 754px; display: none; top: 532px; left: 50px;"></div><div class="wtBorder area" style="background-color: rgb(75, 137, 255); height: 507px; width: 1px; display: none; top: 26px; left: 804px;"></div><div class="wtBorder area corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(255, 255, 255); border-image: initial; display: none; top: 526px; left: 798px;"></div></div></div></div></div></div></div><div class="ht_clone_top handsontable" style="position: absolute; top: 0px; left: 0px; overflow: hidden; width: 805px; height: 30px;"><div class="wtHolder" style="position: relative; width: 805px; height: 60px;"><div class="wtHider" style="width: 805px;"><div class="wtSpreader" style="position: relative; left: 0px;"><table class="htCore"><colgroup><col class="rowHeader" style="width: 50px;"><col style="width: 53px;"><col style="width: 111px;"><col style="width: 92px;"><col style="width: 120px;"><col style="width: 92px;"><col style="width: 89px;"><col style="width: 87px;"><col style="width: 111px;"></colgroup><thead><tr><th class="" style="height: 25px;"><div class="relative"><span class="colHeader cornerHeader">&nbsp;</span></div></th><th class=""><div class="relative"><span class="colHeader columnSorting sortAction">ID</span></div></th><th class=""><div class="relative"><span class="colHeader columnSorting sortAction">Country</span></div></th><th class=""><div class="relative"><span class="colHeader columnSorting sortAction">Code</span></div></th><th class="ht__highlight"><div class="relative"><span class="colHeader columnSorting sortAction">Currency</span></div></th><th class=""><div class="relative"><span class="colHeader columnSorting sortAction">Level</span></div></th><th class=""><div class="relative"><span class="colHeader columnSorting sortAction">Units</span></div></th><th class=""><div class="relative"><span class="colHeader columnSorting sortAction">Date</span></div></th><th class=""><div class="relative"><span class="colHeader columnSorting sortAction">Change</span></div></th></tr></thead><tbody></tbody></table><div class="htBorders"><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill corner" style="background-color: rgb(255, 0, 0); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder area" style="background-color: rgb(75, 137, 255); height: 1px; width: 1px; display: none;"></div><div class="wtBorder area" style="background-color: rgb(75, 137, 255); height: 1px; width: 1px; display: none;"></div><div class="wtBorder area" style="background-color: rgb(75, 137, 255); height: 1px; width: 1px; display: none;"></div><div class="wtBorder area" style="background-color: rgb(75, 137, 255); height: 1px; width: 1px; display: none;"></div><div class="wtBorder area corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div></div></div></div></div></div><div class="ht_clone_bottom handsontable" style="position: absolute; top: 0px; left: 0px; overflow: hidden;"><div class="wtHolder" style="position: relative;"><div class="wtHider"><div class="wtSpreader" style="position: relative;"><table class="htCore"><colgroup></colgroup><thead><tr></tr></thead><tbody></tbody></table></div></div></div></div><div class="ht_clone_left handsontable" style="position: absolute; top: 0px; left: 0px; overflow: hidden; height: 487px; width: 54px;"><div class="wtHolder" style="position: relative; height: 487px; width: 84px;"><div class="wtHider" style="height: 533px;"><div class="wtSpreader" style="position: relative; top: 0px;"><table class="htCore"><colgroup><col class="rowHeader" style="width: 50px;"></colgroup><thead><tr><th class="" style="height: 25px;"><div class="relative"><span class="colHeader cornerHeader">&nbsp;</span></div></th></tr></thead><tbody><tr><th class=""><div class="relative"><span class="rowHeader">1</span></div></th></tr><tr><th class="ht__highlight"><div class="relative"><span class="rowHeader">2</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">3</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">4</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">5</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">6</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">7</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">8</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">9</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">10</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">11</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">12</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">13</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">14</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">15</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">16</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">17</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">18</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">19</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">20</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">21</span></div></th></tr><tr><th class=""><div class="relative"><span class="rowHeader">22</span></div></th></tr></tbody></table><div class="htBorders"><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill corner" style="background-color: rgb(255, 0, 0); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder area" style="background-color: rgb(75, 137, 255); height: 1px; width: 1px; display: none;"></div><div class="wtBorder area" style="background-color: rgb(75, 137, 255); height: 1px; width: 1px; display: none;"></div><div class="wtBorder area" style="background-color: rgb(75, 137, 255); height: 1px; width: 1px; display: none;"></div><div class="wtBorder area" style="background-color: rgb(75, 137, 255); height: 1px; width: 1px; display: none;"></div><div class="wtBorder area corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div></div></div></div></div></div><div class="ht_clone_top_left_corner handsontable" style="position: absolute; top: 0px; left: 0px; overflow: hidden; height: 30px; width: 54px;"><div class="wtHolder" style="position: relative;"><div class="wtHider"><div class="wtSpreader" style="position: relative;"><table class="htCore"><colgroup><col class="rowHeader" style="width: 50px;"></colgroup><thead><tr><th class="" style="height: 25px;"><div class="relative"><span class="colHeader cornerHeader">&nbsp;</span></div></th></tr></thead><tbody></tbody></table><div class="htBorders"><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current" style="background-color: rgb(75, 137, 255); height: 2px; width: 2px; display: none;"></div><div class="wtBorder current corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill" style="background-color: rgb(255, 0, 0); height: 1px; width: 1px; display: none;"></div><div class="wtBorder fill corner" style="background-color: rgb(255, 0, 0); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div><div style="position: absolute; top: 0px; left: 0px;"><div class="wtBorder area" style="background-color: rgb(75, 137, 255); height: 1px; width: 1px; display: none;"></div><div class="wtBorder area" style="background-color: rgb(75, 137, 255); height: 1px; width: 1px; display: none;"></div><div class="wtBorder area" style="background-color: rgb(75, 137, 255); height: 1px; width: 1px; display: none;"></div><div class="wtBorder area" style="background-color: rgb(75, 137, 255); height: 1px; width: 1px; display: none;"></div><div class="wtBorder area corner" style="background-color: rgb(75, 137, 255); height: 6px; width: 6px; border: 1px solid rgb(255, 255, 255); display: none;"></div></div></div></div></div></div></div><div class="handsontableInputHolder ht_editor_hidden" style="top: 509px; left: 707px; right: auto; opacity: 0; height: 1px;"><textarea tabindex="-1" class="handsontableInput" style="width: 88px; height: 23px; font-size: 13px; font-family: Roboto, Helvetica, Arial, sans-serif; resize: none; min-width: 88px; max-width: 88px; overflow-y: visible;"></textarea></div><div class="handsontableInputHolder ht_editor_hidden"><textarea tabindex="-1" class="handsontableInput" style="width: 0px; height: 0px; overflow-y: visible;"></textarea></div><div class="handsontableInputHolder ht_editor_hidden" style="top: 49px; left: 305px; right: auto; opacity: 0; height: 1px;"><textarea tabindex="-1" class="handsontableInput" style="width: 111px; height: 23px; font-size: 13px; font-family: Roboto, Helvetica, Arial, sans-serif; resize: none; min-width: 111px; max-width: 490px; overflow-y: visible;"></textarea></div></div>
+    <a href=""><div class="button">Sauvegarder</div></a>
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: ""
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+
+
+<textarea id="HandsontableCopyPaste" class="copyPaste" tabindex="-1" autocomplete="off" wrap="hard"></textarea>
+
+
+</body>
+
+</html>
