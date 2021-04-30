@@ -19,9 +19,7 @@
 	}
 }
 
-@media (min-width: 768px) {
 	.first-card img {
 		width:300px; 
 		height:216px; 
 	}
-}
