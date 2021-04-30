@@ -1,120 +1,75 @@
 <!DOCTYPE html>
 <html>
-
-
 <head>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>Handsontable example</title>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="googlebot" content="noindex, nofollow">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-  <script type="text/javascript" src="/js/lib/dummy.js"></script>
-   <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
-
-  <style id="compiled-css" type="text/css">
-      </style>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@latest/dist/handsontable.full.min.css">
-<link rel="stylesheet" type="text/css" href="https://handsontable.com/static/css/main.css">
-<script src="https://cdn.jsdelivr.net/npm/handsontable@latest/dist/handsontable.full.min.js"></script>
-
-  
-
-
-  <!-- TODO: Missing CoffeeScript 2 -->
-
-  <script type="text/javascript">//<![CDATA[
-
-    window.onload=function(){
-var visibilite = {"prv": "Privé", "pub": "Public"};
-      
-
-var hotElement = document.querySelector('#hot');
-var hotElementContainer = hotElement.parentNode;
-var hotSettings = {
-  columns: [
-    {
-      data: 'Nom',
-      type: 'text',
-      width:120
-    },
-    {
-      data: 'Prénom',
-      type: 'text', 
-      width:120
-  	},
-    {
-      data: 'Email',
-      type: 'text',
-      width:120
-    },
-    {
-      data: 'Téléphone portable',
-      type: 'text',
-      width:120
-    },
-     {
-      data: 'Commentaire',
-      type: 'text',
-      width:150
-    },
-     {
-      data: 'Visibilité',
-      type: 'dropdown', 
-      source: ['privé', 'public'],
-      width:60
-    }
-  ],
-  stretchH: 'all',
-  width: 800,
-  autoWrapRow: true,
-  height: 387,
-  maxRows: 200,
-  rowHeaders: true,
-  colHeaders: [
-    'Nom',	'Prénom',	'Email',	'Téléphone portable', 'Commentaire', 'Visibilité'
-  ],
-  columnSorting: {
-    indicator: true
-  },
-  autoColumnSize: {
-    samplingRatio: 23
-  }
-};
-var hot = new Handsontable(hotElement, hotSettings);
-
-}
-
-  //]]></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="bulma.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 
-</head>
 <body>
+	<div class="container is-fullhd mr-3 ml-3">
+			<img src="logo.svg" width="200px" height="auto" class="mt-5">
 
-    <div id="hot" style="height: 487px; overflow: hidden; width: 805px;" data-originalstyle="height: 487px; overflow: hidden; width: 805px;" class="handsontable htRowHeaders htColumnHeaders"></div>
-    <a href="https://www.figma.com/proto/2SfSb4BVPhOaxHYsL1gxE5/Pumpkin-Business?node-id=286%3A143&viewport=1964%2C333%2C0.16283433139324188&scaling=min-zoom"><div class="button">Sauvegarder</div></a>
-  <script>
-    // tell the embed parent frame the height of the content
-    if (window.parent && window.parent.parent){
-      window.parent.parent.postMessage(["resultsFrame", {
-        height: document.body.getBoundingClientRect().height,
-        slug: ""
-      }], "*")
-    }
+			<div class="columns mt-3">
+				<div class="column is-two-thirds">
+					<div class="card p-6 is-flex flex-wrap-mobile first-card" style="background-color:#34B3E6;">
+						<div>
+						<h2 class="title is-3 has-text-white">Notre vision</h2>
+						<p class="has-text-white title is-4 mb-3">Pumpkin rapproche les commerçants français des 18-35 ans en leur proposant des services financiers prêts à l'emploi</p>
+						</div>
+						<img src="wallets.png" style="width:300px; height:216px; margin-right: -48px; margin-bottom: -48px;">		
+					</div>
+				</div>
+				<div class="column">
+					<div class="card has-background-info-light p-6 second-card">
+						<h2 class="title is-3"><div class="mb-5" style="font-size:40px;">⌚️</div>Tous nos clients sans exception gagnent <span style="color: #34B3E6;">du temps</span> et <span style="color: #34B3E6;">de l’argent.</h2>
+					</div>
+				</div>
+			</div>
 
-    // always overwrite window.name, in case users try to set it manually
-    window.name = "result"
-  </script>
+			<div class="columns">
+				<div class="column is-half">
+					<div class="card p-6 third-card" style="background-color:#00D7B0;">
+						<img src="blink.gif" class="mb-5" style="width: 200px; height: 200px; border-radius: 100%; object-fit: cover;">
+						<h2 class="title is-3">Du temps pour les pros</h2>
+						<p>Un programme de fidélité sans la moindre intégration ou action manuelle. Clignez des yeux, c'est parti.</p>		
+					</div>
+				</div>
+				<div class="column">
+					<div class="card p-6 fourth-card"style="background-color:#FADE8B;">
+						<img src="nicolas.png" style="height:200px;" class="mb-5">
+						<h2 class="title is-3">Du temps pour les particuliers</h2>
+						<p>Souscription en un éclair. Échange de l’argent instantanément avec les autres utilisateurs. Paiement avec la carte et sans jamais attendre pour voir son compte bancaire évoluer. On en attend pas moins d'une banque.</p>		
+					</div>
+				</div>
+			</div>
 
-
-<textarea id="HandsontableCopyPaste" class="copyPaste" tabindex="-1" autocomplete="off" wrap="hard"></textarea>
-
-
+			<div class="columns">
+				<div class="column is-third">
+					<div class="card p-6 fifth-card"style="background-color:#F5A1C5;">
+						<img src="heart.gif" style="height:130px;" class="mb-5">
+						<h2 class="title is-3">De l'argent pour nos clients</h2>
+						<p>Chaque dépense chez leurs commerçants préférés renfloue instantanément le porte-monnaie, et pas qu'un peu.</p>		
+					</div>
+				</div>
+				<div class="column">
+					<div class="card p-6 sixth-card" style="background-color:#34B3E6;">
+						<img src="glass.gif" style="height:130px;" class="mb-5">
+						<h2 class="title is-3 has-text-white">De l'argent pour les commerçants</h2>
+						<p>Prospecter de nouveaux clients sans bouger le petit doigt. Connaître ses clients et ce qu’ils attendent de la marque. Se positionner facilement par rapport à la concurrence locale et nationale.</p>		
+					</div>
+				</div>
+				<div class="column">
+					<div class="card has-background-info-light p-6 seventh-card">
+						<img src="logo2.svg" style="height:130px;" class="mb-5">
+						<h2 class="title is-3">Une banque transparente</h2>
+						<p>Aucun frais caché, des informations claires, pertinentes, une expérience ludique. Le minimum selon Pumpkin.</p>
+					</div>
+				</div>
+			</div>
+		
+		<script type="text/javascript" src="animations.js"></script>
+	</div>
 </body>
-
 </html>

@@ -1,33 +1,4 @@
-body {
-	    background-image: url(bg.png) !important;
-    background-position: top left !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    margin: 0; height: 100%; overflow: hidden
-}
-
-#hot {
-	margin-left: 27.5%;
-    margin-top: 18%;
-    position:absolute;
-}
-
-#hot-display-license-info {
-	display:none !important;
-}
-
-.button {
-	width:170px;
-	height:40px;
-	background-color: white;
-	color: #00b3da !important;
-	border: 1px solid #00b3da;
-	color:white;
-	text-align:center;
-	line-height:2.4;
-	border-radius:25px;
-	position:absolute;
-	z-index:200;
-	margin-left: 71%;
-    margin-top: 14%;
+h1 {
+	margin-right: 40px;
+	color: red;
 }
