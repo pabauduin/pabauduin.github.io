@@ -24,7 +24,7 @@ thirdLineCard.forEach((element) => {
 	}
 });
 
-function reportWindowSize() {
+function setWindowSize() {
 	if (window.innerWidth > 768) {
 		firstLineCard.forEach((element) => {element.style.height = `${heighestFirstLineCard}px`;})
 		secondLineCard.forEach((element) => {element.style.height = `${heighestSecondLineCard}px`;})
@@ -35,6 +35,37 @@ function reportWindowSize() {
 	}
 };
 
-reportWindowSize();
+function changeWindowSize() {
+	if (window.innerWidth > 768) {
+		firstLineCard.forEach((element) => {
+			if (element.style.height = heighestFirstLineCard) {
+				element.style.height = null;
+			}
+			else {
+				element.style.height = `${heighestFirstLineCard}px`;
+			}
+		})
+		secondLineCard.forEach((element) => {
+			if (element.style.height = heighestSecondLineCard) {
+				element.style.height = null;
+			}
+			else {
+				element.style.height = `${heighestSecondLineCard}px`;
+			}
+		})
+		thirdLineCard.forEach((element) => {
+			if (element.style.height = heighestThirdLineCard) {
+				element.style.height = null;
+			} else {
+				element.style.height = `${heighestThirdLineCard}px`;
+			}
+		})
+	}
+	else {
+		card.forEach((element) => { element.style.height = "100%" })
+	}
+};
 
-window.addEventListener('resize', reportWindowSize);
+setWindowSize();
+
+window.addEventListener('resize', changeWindowSize);
