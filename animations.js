@@ -1,41 +1,40 @@
-var firstCard = document.querySelectorAll(".first-card")[0];
-var secondCard = document.querySelectorAll(".second-card")[0];
-var thirdCard = document.querySelectorAll(".third-card")[0];
-var fourthCard = document.querySelectorAll(".fourth-card")[0];
-var fifthCard = document.querySelectorAll(".fifth-card")[0];
-var sixthCard = document.querySelectorAll(".sixth-card")[0];
-var seventhCard = document.querySelectorAll(".seventh-card")[0];
+var firstLineCard = document.querySelectorAll(".first-line");
+var secondLineCard = document.querySelectorAll(".second-line");
+var thirdLineCard = document.querySelectorAll(".third-line");
+var card = document.querySelectorAll(".card");
+var heighestFirstLineCard = 0;
+var heighestSecondLineCard = 0;
+var heighestThirdLineCard = 0;
 
+firstLineCard.forEach((element) => {
+	if (element.offsetHeight > heighestFirstLineCard) {
+		heighestFirstLineCard = element.offsetHeight;
+	}
+});
 
+secondLineCard.forEach((element) => {
+	if (element.offsetHeight > heighestSecondLineCard) {
+		heighestSecondLineCard = element.offsetHeight;
+	}
+});
 
-if (window.innerWidth > 768) {
-	secondCard.style.height = `${firstCard.offsetHeight}px`;
-	thirdCard.style.height = `${fourthCard.offsetHeight}px`;
-	fifthCard.style.height = `${sixthCard.offsetHeight}px`;
-	seventhCard.style.height = `${sixthCard.offsetHeight}px`;
-}
-else {
-	secondCard.style.height = "100%";
-	thirdCard.style.height = "100%";
-	fourthCard.style.height = "100%";
-	fifthCard.style.height = "100%";
-	sixthCard.style.height = "100%";
-}
+thirdLineCard.forEach((element) => {
+	if (element.offsetHeight > heighestThirdLineCard) {
+		heighestThirdLineCard = element.offsetHeight;
+	}
+});
 
 function reportWindowSize() {
 	if (window.innerWidth > 768) {
-		secondCard.style.height = `${firstCard.offsetHeight}px`;
-		thirdCard.style.height = `${fourthCard.offsetHeight}px`;
-		fifthCard.style.height = `${sixthCard.offsetHeight}px`;
-		seventhCard.style.height = `${sixthCard.offsetHeight}px`;
+		firstLineCard.forEach((element) => {element.style.height = `${heighestFirstLineCard}px`;})
+		secondLineCard.forEach((element) => {element.style.height = `${heighestSecondLineCard}px`;})
+		thirdLineCard.forEach((element) => {element.style.height = `${heighestThirdLineCard}px`;})
 	}
 	else {
-		secondCard.style.height = "100%";
-		thirdCard.style.height = "100%";
-		fourthCard.style.height = "100%";
-		fifthCard.style.height = "100%";
-		seventhCard.style.height = "100%";
+		card.forEach((element) => { element.style.height = "100%" })
 	}
-}
+};
+
+reportWindowSize();
 
 window.addEventListener('resize', reportWindowSize);
