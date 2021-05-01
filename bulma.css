@@ -1,8 +1,51 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
 
+.first-card img {
+	width: 225px; 
+	height: 169.5px; 
+	margin-right: -48px; 
+	margin-bottom: -48px;
+}
+
+.little-cards img {
+	height: 130px;
+	width: auto;
+}
+
+.third-card img {
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+	object-fit: cover;
+}
+
+.fourth-card img {
+	height: 200px;
+	width: auto;
+}
+
+.bg-blue {
+	background-color: #34B3E6;
+}
+
+.bg-pink {
+	background-color: #F4A1C6;
+}
+
+.bg-yellow {
+	background-color: #FADE8C;
+}
+
+.bg-green {
+	background-color: #00D7B0;
+}
+
 @media (max-width: 1064px) {
   .flex-wrap-mobile {
     flex-wrap : wrap;
+  }
+  .first-card p {
+  	margin-bottom: 40px;
   }
 }
 
@@ -17,9 +60,8 @@
 	.phone img {
 		position: absolute;
 	}
-}
-
 	.first-card img {
-		width:300px; 
-		height:216px; 
+		width:338px; 
+		height:254.5px; 
 	}
+}
